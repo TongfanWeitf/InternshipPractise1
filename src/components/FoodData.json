@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "name": "Shahi Lucknowi Pot Biryani",
+        "description": "Rich aromatic rice sauteed fresh ground spices flavoured with fresh...",
+        "price": 17.99,
+        "imageUrl1": "/foodexample0.png",
+        "imageUrl2": "/foodexample2.png",
+        "likes": 0,
+        "videoUrl1": "https://youtu.be/pOPAMAIhyLw",
+        "videoUrl2": "https://www.youtube.com/watch?v=imuTZ3EwCWA&t=3s"
+    },
+    {
+        "id": 2,
+        "name": "Another Food Item",
+        "description": "Description of this food item...",
+        "price": 19.99,
+        "imageUrl": "/anotherfooditem.png",
+        "likes": 0,
+        "videoUrl": "https://youtu.be/exampleVideoUrl"
+    }
+]

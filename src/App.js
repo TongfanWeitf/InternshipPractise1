@@ -1,24 +1,27 @@
-import logo from './logo.svg';
 import './App.css';
+import { Link } from 'react-router-dom';
+import Menu from './Menu'
+import All from './All'
+import Vegan from './Vegan'
+import Vegetarian from './Vegetarian'
+import NonVegetarian from './NonVegetarian'
+import HomePage from './HomePage'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+        <Routes>
+          <Route path='/' element={<HomePage />}/>
+          <Route path='/Homepage' element={<HomePage />}/>
+          <Route path='/Menu' element={<Menu />}/>
+          <Route path='/All' element={<All />}/>
+          <Route path='/Vegan' element={<Vegan />}/>
+          <Route path='/Vegetarian' element={<Vegetarian />}/>
+          <Route path='/NonVegetarian' element={<NonVegetarian />}/>
+        </Routes>
+     
+  </Router>
   );
 }
 
