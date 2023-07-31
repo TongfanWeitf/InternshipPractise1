@@ -6,7 +6,9 @@ import foodData from './FoodData.json';
 // import Slider from "react-slick";
 // import "slick-carousel/slick/slick.css"; 
 // import "slick-carousel/slick/slick-theme.css";
-// import Carousel from 'react-material-ui-carousel';
+import { Carousel } from 'react-responsive-carousel';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+
 
 class Food extends Component {
 
@@ -70,9 +72,21 @@ class Food extends Component {
                     }}>
                 </div> */}
 
-                <a href={item.videoUrl2} target="_blank" rel="noopener noreferrer">
+                {/* <a href={item.videoUrl2} target="_blank" rel="noopener noreferrer">
                     <img src={item.imageUrl1} style={{width: '200px', height: '200px'}} alt={item.name} />
-                </a>
+                </a> */}
+                <Carousel className="my-card__media">
+                    {this.state.items.map((foodurl, index) => (
+                        item.images.map((image, i) => (
+                            <div  key={index + '-' + i}>
+                                <a href={image.videoUrl} target="_blank" rel="noopener noreferrer">
+                                    <img src={image.url} alt={foodurl.name + i} />
+                                </a>
+                                <p className="legend">{foodurl.name}</p>
+                            </div>
+                        ))
+                    ))}
+                </Carousel>
             </div>
         </div>
     )
